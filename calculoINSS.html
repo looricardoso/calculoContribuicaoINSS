@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Contribuição ao INSS</title>
+    <link rel="stylesheet" href="calculoINSS.css" />
+</head>
+<body>
+    <h1>Cálculo de Contribuição ao INSS</h1>
+
+    <p>Vigência 01/2021</p>
+
+    <form action="">
+        <fieldset id="combo1">
+            <legend>Tipo de Contribuinte</legend>
+            <div class="informations">
+                <input type="radio" name="tipoContribuinte" id="1" value="1" checked />
+                <label for="1">Empregado</label>
+            </div>
+            <div class="informations">
+                <input type="radio" name="tipoContribuinte" id="1007" value="1007" />
+                <label for="1007">Contribuinte Individual Cód. 1007</label>
+            </div>
+            <div class="informations">
+                <input type="radio" name="tipoContribuinte" id="1163" value="1163" />
+                <label for="1163">Contribuinte Individual Cód. 1163</label>
+            </div>
+        </fieldset>
+        
+        <fieldset id="combo2">
+            <legend>Salário de Contribuição</legend>
+            <div id="valorDaContribuicao">
+                <div id="valor">
+                    <label for="salarioContribuicao">R$</label>
+                    <input type="text" name="salarioContribuicao" id="salarioContribuicao" />
+                </div>
+            </div>
+            <div>
+                <p id="aviso"></p>
+            </div>
+        </fieldset>
+
+        <div id="botoes">
+            <button type="submit" id="botaoCalcular">Calcular</button>
+            <button type="reset" id="botaoResetar">Apagar Dados</button>
+            <input type="button" value="Imprimir" id="printThisPage">
+        </div>    
+    </form>
+
+    <div id="valorFinal">
+        O valor da contribuição é de: <span id="valorFinalDeContribuicao"></span>
+    </div>
+
+    <Table id="1">
+        <tr>
+            <td>De</td>
+            <td>Até</td>
+            <td>Percentual</td>
+            <td>Contribuição por Faixa</td>
+        </tr>
+        <tr>
+            <td id="de1"></td>
+            <td id="ate1"></td>
+            <td id="perc1"></td>
+            <td id="contribuicaFaixa1"></td>
+        </tr>
+        <tr>
+            <td id="de2"></td>
+            <td id="ate2"></td>
+            <td id="perc2"></td>
+            <td id="contribuicaFaixa2"></td>
+        </tr>
+        <tr>
+            <td id="de3"></td>
+            <td id="ate3"></td>
+            <td id="perc3"></td>
+            <td id="contribuicaFaixa3"></td>
+        </tr>
+        <tr>
+            <td id="de4"></td>
+            <td id="ate4"></td>
+            <td id="perc4"></td>
+            <td id="contribuicaFaixa4"></td>
+        </tr>
+    </Table>
+
+    <table id="2">
+        <tr>
+            <td colspan="2">Contribuinte Individual</td>
+        </tr>
+        <tr>
+            <td id="contribuicaoIndividual1007">Código 1007 (20%): </td>
+            <td id="valorContribuicao1007"></td>
+        </tr>
+        <tr>
+            <td id="contribuicaoIndividual1163">Código 1163 (11%): </td>
+            <td id="valorContribuicao1163"></td>
+        </tr>
+    </table>
+
+    <p>Teto de contribuição para o ano de 2021 é de R$ 6.433,57</p>
+
+</body>
+<script src="calculoINSS.js"></script>
+</html>

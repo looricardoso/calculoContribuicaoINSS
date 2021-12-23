@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+#aviso {
+    padding: 15px 0px 15px 0px;
+    width: 500px;
+}
+
+table, td, tr {
+    border: 1px black;
+    border-style: solid;
+    border-collapse: collapse;
+    line-height: 30px;
+    margin: 25px 0px 25px 0px;
+    text-align: center;
+}
+
+td {
+    width: 115px;
+}
+
+#botoes {
+    padding: 25px 0px 25px 0px;
+    display: flex;
+    flex-flow: column;
+    width: 250px;
+    margin: auto
+}
+
+#contribuicaoIndividual1007 {
+    width: 250px;
+}
+
+button, #printThisPage {
+    margin: 7px;
+    padding: 4px;
+}
+
+#valorFinal {
+    margin: 10px;
+}
+
+#combo2 {
+    height: 120px;
+}
+
+#valorDaContribuicao {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
